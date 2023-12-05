@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="./home.html" class="w3-button w3-block w3-black">Home</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="./about.html" class="w3-button w3-block w3-black">About</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="./menu.html" class="w3-button w3-block w3-black">Education
+        </a>
+      </div>
+      <div class="w3-col s3">
+        <a href="./Contact.html" class="w3-button w3-block w3-black">Contact</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="./Java.html" class="w3-button w3-block w3-black">Java</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="./API.html" class="w3-button w3-block w3-black">API</a>
+    </div>
+  </div>
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px"><br>
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Education</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Past</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Current</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>2018-2020</h5>
+      <p class="w3-text-grey">Piyamaharachalai School</p><br>
+    
+      <h5>2015-2018</h5>
+      <p class="w3-text-grey">Piyamaharachalai School</p><br>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>2020-Current</h5>
+      <p class="w3-text-grey">Sakonnakhon Rajabhat University</p><br>
+  </div>
+</div>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
